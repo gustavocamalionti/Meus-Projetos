@@ -5,8 +5,8 @@ notas_sucesso = [[200, 1], [100, 2], [50, 2], [20, 2], [10, 2], [5, 2], [2, 2]]
 notas_temporarias = [[200, 1], [100, 2], [50, 2], [20, 2], [10, 2], [5, 2], [2, 2]]
 
 
-soma_caixa = notas_sucesso[0][0]*notas_sucesso[0][1] + notas_sucesso[1][0]*notas_sucesso[0][1] + notas_sucesso[2][0]*notas_sucesso[0][1] + notas_sucesso[3][0]*notas_sucesso[0][1] + notas_sucesso[4][0]*notas_sucesso[5][1]+ notas_sucesso[6][0]*notas_sucesso[0][1]
-
+soma_caixa = notas_sucesso[0][0]*notas_sucesso[0][1] + notas_sucesso[1][0]*notas_sucesso[1][1] + notas_sucesso[2][0]*notas_sucesso[2][1] + notas_sucesso[3][0]*notas_sucesso[3][1] + notas_sucesso[4][0]*notas_sucesso[4][1]+ notas_sucesso[5][0]*notas_sucesso[5][1] + notas_sucesso[6][0]*notas_sucesso[6][1]
+print(soma_caixa)
 #INICIO DO PROGRAMA
 while programa_situacao == True:
     notas_recebidas = [[200, 0], [100, 0], [50, 0], [20, 0], [10, 0], [5, 0], [2, 0]]
@@ -48,7 +48,7 @@ while programa_situacao == True:
                     elif decisao == 'S':
                         break
             
-            elif soma_caixa > int(saque):
+            elif soma_caixa >= int(saque):
                 
                 #VALIDAÇÃO
                 transacao_realizada = True
@@ -114,3 +114,7 @@ while programa_situacao == True:
     #ERRO DE DIGITAÇÃO DO USUÁRIO
     else:
         print('\033[30;41m OPÇÃO INVÁLIDA!\033[m tente novamente.')
+
+
+
+
